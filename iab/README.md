@@ -9,6 +9,8 @@ Esta é a documentação de como implementar os formatos IAB no seu site.
 - [In-Text Banner](#in-text-banner)
 - [Scroll Banner](#scroll-banner)
 
+---------
+
 ## Tag Principal
 
 Copie e cole o snippet de código abaixo dentro da tag `head` do seu site:
@@ -26,6 +28,8 @@ Copie e cole o snippet de código abaixo dentro da tag `head` do seu site:
 <!-- IMPLEMENTAÇÃO TERMINA AQUI -->
 ```
 
+---------
+
 ## Under Banner
 
 Para mostrar o formato `Under Banner` siga as intruções do snippet abaixo:
@@ -38,6 +42,8 @@ Para mostrar o formato `Under Banner` siga as intruções do snippet abaixo:
 </script>
 ```
 
+---------
+
 ## Side Banner
 
 Para mostrar o formato `Side Banner` siga as intruções do snippet abaixo:
@@ -49,6 +55,8 @@ Para mostrar o formato `Side Banner` siga as intruções do snippet abaixo:
   });
 </script>
 ```
+
+---------
 
 ## In-Text Banner
 
@@ -67,6 +75,8 @@ Para mostrar o formato `In-Text Banner` coloque o snippet abaixo dentro da tag `
 |--------------|---------------|
 | `<DIV_NAME>` | `id` da `div` |
 
+---------
+
 ## Scroll Banner
 
 Para mostrar o formato `Scroll Banner` coloque o snippet abaixo dentro da tag `body` exatamente onde você quer que o anúncio apareça
@@ -83,3 +93,5 @@ Para mostrar o formato `Scroll Banner` coloque o snippet abaixo dentro da tag `b
 | Placebolder  | Descrição     |
 |--------------|---------------|
 | `<DIV_NAME>` | `id` da `div` |
+
+---------
