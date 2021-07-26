@@ -4,7 +4,7 @@
   - [Side Banner](#side-banner)
   - [In-Text Banner](#in-text-banner)
   - [Scroll Banner](#scroll-banner)
-- [Avançado](#avancado)
+- [Avançado](#avançado)
   - [Tamanhos Customizaveis](#tamanhos-customizaveis)
 
 
