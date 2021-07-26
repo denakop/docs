@@ -2,8 +2,11 @@
   - [Tag Principal](#tag-principal)
   - [Under Banner](#under-banner)
   - [Side Banner](#side-banner)
+    - [Exemplo Side Banner](#exemplo-side-banner)
   - [In-Text Banner](#in-text-banner)
+    - [Exemplo In-Text Banner](#exemplo-in-text-banner)
   - [Scroll Banner](#scroll-banner)
+    - [Exemplo Scroll Banner](#exemplo-scroll-banner)
 - [Avançado](#avançado)
   - [Tamanhos Customizaveis](#tamanhos-customizaveis)
     - [Exemplo Tamanhos Customizaveis](#exemplo-tamanhos-customizaveis)
@@ -57,6 +60,18 @@ Para mostrar o formato `Side Banner` siga as intruções do snippet abaixo:
 <script>
   var denakop = denakop || { cmd: [] };
   denakop.cmd.push(function () {
+    denakop.showSidePlacement(<CONTAINER_WITDH>); // Implementar Side Banner
+  });
+</script>
+```
+### Onde
+- `<CONTAINER_WITDH>`: Largura da área útil de conteúdo do seu site
+
+#### Exemplo Side Banner
+```html
+<script>
+  var denakop = denakop || { cmd: [] };
+  denakop.cmd.push(function () {
     denakop.showSidePlacement(1130); // Implementar Side Banner
   });
 </script>
@@ -79,6 +94,17 @@ Para mostrar o formato `In-Text Banner` coloque o snippet abaixo dentro da tag `
 ### Onde
 - `<DIV_NAME>`: `id` da `div`
 
+#### Exemplo In-Text Banner
+```html
+<div id="denakop-ad-intext">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd('denakop-ad-intext', 'intext');
+    });
+  </script>
+</div>
+```
+
 ---------
 
 ## Scroll Banner
@@ -95,6 +121,17 @@ Para mostrar o formato `Scroll Banner` coloque o snippet abaixo dentro da tag `b
 ```
 ### Onde
 - `<DIV_NAME>`: `id` da `div`
+
+#### Exemplo Scroll Banner
+```html
+<div id="denakop-ad-scroll">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd('denakop-ad-scroll', 'scroll');
+    });
+  </script>
+</div>
+```
 
 ---------
 
