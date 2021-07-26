@@ -147,10 +147,10 @@ Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte 
 
 #### Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo
 ```html
-<div id="denakop-ad-scroll">
+<div id="denakop-ad-intext">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('denakop-ad-scroll', 'intext', {
+      denakop.displayAd('denakop-ad-intext', 'intext', {
         desktop: [[496, 80]],
         tablet: [[120, 600]],
         mobile: [[250, 250]]
