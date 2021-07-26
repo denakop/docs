@@ -1,3 +1,3 @@
 # Denakop Docs
 
-- [Como implementar os formatos IAB](/docs/iab/)
+- [Como implementar os formatos IAB](/iab/)
