@@ -1,13 +1,16 @@
+- [IAB](#iab)
+  - [Tag Principal](#tag-principal)
+  - [Under Banner](#under-banner)
+  - [Side Banner](#side-banner)
+  - [In-Text Banner](#in-text-banner)
+  - [Scroll Banner](#scroll-banner)
+- [Avançado](#avancado)
+  - [Tamanhos Customizaveis](#tamanhos-customizaveis)
+
 
 # IAB
 
 Esta é a documentação de como implementar os formatos IAB no seu site.
-
-- [Tag Principal](#tag-principal)
-- [Under Banner](#under-banner)
-- [Side Banner](#side-banner)
-- [In-Text Banner](#in-text-banner)
-- [Scroll Banner](#scroll-banner)
 
 ---------
 
@@ -93,5 +96,27 @@ Para mostrar o formato `Scroll Banner` coloque o snippet abaixo dentro da tag `b
 | Placebolder  | Descrição     |
 |--------------|---------------|
 | `<DIV_NAME>` | `id` da `div` |
+
+---------
+
+# Avançado
+
+## Tamanhos Customizaveis
+
+Para forçar o tamanho de anúncios utilize a seguinte configuração de Snippet abaixo:
+```html
+<div id="<DIV_NAME>">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd('<DIV_NAME>', 'scroll', <CUSTOM_SIZES>);
+    });
+  </script>
+</div>
+```
+### Onde
+| Placebolder      | Descrição                                      |
+|------------------|------------------------------------------------|
+| `<DIV_NAME>`     | `id` da `div`                                  |
+| `<CUSTOM_SIZES>` | Tamanhos personalizados, exemplo `[[496, 80]]` |
 
 ---------
