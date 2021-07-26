@@ -6,6 +6,9 @@
   - [Scroll Banner](#scroll-banner)
 - [Avançado](#avançado)
   - [Tamanhos Customizaveis](#tamanhos-customizaveis)
+    - [Exemplo Tamanhos Customizaveis](#exemplo-tamanhos-customizaveis)
+  - [Tamanhos Customizaveis Por Tipo de Dispositivo](#tamanhos-customizaveis-por-tipo-de-dispositivo)
+    - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo)
 
 
 # IAB
@@ -74,9 +77,7 @@ Para mostrar o formato `In-Text Banner` coloque o snippet abaixo dentro da tag `
 </div>
 ```
 ### Onde
-| Placebolder  | Descrição     |
-|--------------|---------------|
-| `<DIV_NAME>` | `id` da `div` |
+- `<DIV_NAME>`: `id` da `div`
 
 ---------
 
@@ -93,9 +94,7 @@ Para mostrar o formato `Scroll Banner` coloque o snippet abaixo dentro da tag `b
 </div>
 ```
 ### Onde
-| Placebolder  | Descrição     |
-|--------------|---------------|
-| `<DIV_NAME>` | `id` da `div` |
+- `<DIV_NAME>`: `id` da `div`
 
 ---------
 
@@ -114,9 +113,51 @@ Para forçar o tamanho de anúncios utilize a seguinte configuração de Snippet
 </div>
 ```
 ### Onde
-| Placebolder      | Descrição                                      |
-|------------------|------------------------------------------------|
-| `<DIV_NAME>`     | `id` da `div`                                  |
-| `<CUSTOM_SIZES>` | Tamanhos personalizados, exemplo `[[496, 80]]` |
+- `<DIV_NAME>`: `id` da `div`
+- `<CUSTOM_SIZES>`: Array de tamanhos personalizados
+
+#### Exemplo Tamanhos Customizaveis
+```html
+<div id="denakop-ad-scroll">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd('denakop-ad-scroll', 'scroll', [[496, 80]]);
+    });
+  </script>
+</div>
+```
+
+---------
+
+## Tamanhos Customizaveis Por Tipo de Dispositivo
+
+Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte configuração de Snippet abaixo:
+```html
+<div id="<DIV_NAME>">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd('<DIV_NAME>', 'intext', <CUSTOM_SIZES>);
+    });
+  </script>
+</div>
+```
+### Onde
+- `<DIV_NAME>`: `id` da `div`
+- `<CUSTOM_SIZES>`: Object de tamanhos personalizados
+
+#### Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo
+```html
+<div id="denakop-ad-scroll">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd('denakop-ad-scroll', 'intext', {
+        desktop: [[496, 80]],
+        tablet: [[120, 600]],
+        mobile: [[250, 250]]
+      });
+    });
+  </script>
+</div>
+```
 
 ---------
