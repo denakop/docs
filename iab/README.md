@@ -1,5 +1,6 @@
 - [IAB](#iab)
   - [Tag Principal](#tag-principal)
+  - [Postitial](#postitial)
   - [Under Banner](#under-banner)
   - [Side Banner](#side-banner)
     - [Exemplo Side Banner](#exemplo-side-banner)
@@ -10,8 +11,10 @@
 - [Avançado](#avançado)
   - [Tamanhos Customizaveis](#tamanhos-customizaveis)
     - [Exemplo Tamanhos Customizaveis](#exemplo-tamanhos-customizaveis)
+    - [Exemplo Tamanhos Customizaveis Postitial](#exemplo-tamanhos-customizaveis-postitial)
   - [Tamanhos Customizaveis Por Tipo de Dispositivo](#tamanhos-customizaveis-por-tipo-de-dispositivo)
     - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo)
+    - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo Postitial](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo-postitial)
 
 
 # IAB
@@ -36,6 +39,21 @@ Copie e cole o snippet de código abaixo dentro da tag `head` do seu site:
 </script>
 <!-- IMPLEMENTAÇÃO TERMINA AQUI -->
 ```
+
+---------
+
+## Postitial
+
+Para mostrar o formato `Postitial` siga as intruções do snippet abaixo:
+```html
+<script>
+  var denakop = denakop || { cmd: [] };
+  denakop.cmd.push(function () {
+    denakop.usePostitial(); // Implementar Postitial
+  });
+</script>
+```
+
 
 ---------
 
@@ -164,6 +182,16 @@ Para forçar o tamanho de anúncios utilize a seguinte configuração de Snippet
 </div>
 ```
 
+#### Exemplo Tamanhos Customizaveis Postitial
+```html
+<script>
+  var denakop = denakop || { cmd: [] };
+  denakop.cmd.push(function () {
+    denakop.usePostitial([[300, 600]]);
+  });
+</script>
+```
+
 ---------
 
 ## Tamanhos Customizaveis Por Tipo de Dispositivo
@@ -195,6 +223,20 @@ Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte 
     });
   </script>
 </div>
+```
+
+#### Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo Postitial
+```html
+<script>
+  var denakop = denakop || { cmd: [] };
+  denakop.cmd.push(function () {
+    denakop.usePostitial({
+        desktop: [[496, 80]],
+        tablet: [[120, 600]],
+        mobile: [[250, 250]]
+      });
+  });
+</script>
 ```
 
 ---------
