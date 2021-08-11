@@ -11,10 +11,8 @@
 - [Avançado](#avançado)
   - [Tamanhos Customizaveis](#tamanhos-customizaveis)
     - [Exemplo Tamanhos Customizaveis](#exemplo-tamanhos-customizaveis)
-    - [Exemplo Tamanhos Customizaveis Postitial](#exemplo-tamanhos-customizaveis-postitial)
   - [Tamanhos Customizaveis Por Tipo de Dispositivo](#tamanhos-customizaveis-por-tipo-de-dispositivo)
     - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo)
-    - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo Postitial](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo-postitial)
 
 
 # IAB
@@ -47,9 +45,8 @@ Copie e cole o snippet de código abaixo dentro da tag `head` do seu site:
 Para mostrar o formato `Postitial` siga as intruções do snippet abaixo:
 ```html
 <script>
-  var denakop = denakop || { cmd: [] };
   denakop.cmd.push(function () {
-    denakop.usePostitial(); // Implementar Postitial
+    denakop.usePostitial();
   });
 </script>
 ```
@@ -62,9 +59,8 @@ Para mostrar o formato `Postitial` siga as intruções do snippet abaixo:
 Para mostrar o formato `Under Banner` siga as intruções do snippet abaixo:
 ```html
 <script>
-  var denakop = denakop || { cmd: [] };
   denakop.cmd.push(function () {
-    denakop.showUnderPlacement(); // Implementar Under Banner
+    denakop.useUnderPlacement();
   });
 </script>
 ```
@@ -76,9 +72,10 @@ Para mostrar o formato `Under Banner` siga as intruções do snippet abaixo:
 Para mostrar o formato `Side Banner` siga as intruções do snippet abaixo:
 ```html
 <script>
-  var denakop = denakop || { cmd: [] };
   denakop.cmd.push(function () {
-    denakop.showSidePlacement(<CONTAINER_WITDH>); // Implementar Side Banner
+    denakop.useSidePlacement({
+      containerWidth: <CONTAINER_WITDH>
+    });
   });
 </script>
 ```
@@ -88,9 +85,10 @@ Para mostrar o formato `Side Banner` siga as intruções do snippet abaixo:
 #### Exemplo Side Banner
 ```html
 <script>
-  var denakop = denakop || { cmd: [] };
   denakop.cmd.push(function () {
-    denakop.showSidePlacement(1130); // Implementar Side Banner
+    denakop.useSidePlacement({
+      containerWidth: 1130
+    });
   });
 </script>
 ```
@@ -104,7 +102,10 @@ Para mostrar o formato `In-Text Banner` coloque o snippet abaixo dentro da tag `
 <div id="<DIV_NAME>">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('<DIV_NAME>', 'intext');
+      denakop.displayAd({
+        divId: '<DIV_NAME>',
+        name: 'intext'
+      });
     });
   </script>
 </div>
@@ -117,7 +118,10 @@ Para mostrar o formato `In-Text Banner` coloque o snippet abaixo dentro da tag `
 <div id="denakop-ad-intext">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('denakop-ad-intext', 'intext');
+      denakop.displayAd({
+        divId: 'denakop-ad-intext',
+        name: 'intext'
+      });
     });
   </script>
 </div>
@@ -132,7 +136,10 @@ Para mostrar o formato `Scroll Banner` coloque o snippet abaixo dentro da tag `b
 <div id="<DIV_NAME>">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('<DIV_NAME>', 'scroll');
+      denakop.displayAd({
+        divId: '<DIV_NAME>',
+        name: 'scroll'
+      });
     });
   </script>
 </div>
@@ -145,7 +152,10 @@ Para mostrar o formato `Scroll Banner` coloque o snippet abaixo dentro da tag `b
 <div id="denakop-ad-scroll">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('denakop-ad-scroll', 'scroll');
+      denakop.displayAd({
+        divId: 'denakop-ad-scroll',
+        name: 'scroll'
+      });
     });
   </script>
 </div>
@@ -162,7 +172,11 @@ Para forçar o tamanho de anúncios utilize a seguinte configuração de Snippet
 <div id="<DIV_NAME>">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('<DIV_NAME>', 'scroll', <CUSTOM_SIZES>);
+      denakop.displayAd({
+        divId: '<DIV_NAME>',
+        name: 'scroll',
+        sizes: <CUSTOM_SIZES>
+      });
     });
   </script>
 </div>
@@ -176,20 +190,14 @@ Para forçar o tamanho de anúncios utilize a seguinte configuração de Snippet
 <div id="denakop-ad-scroll">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('denakop-ad-scroll', 'scroll', [[496, 80]]);
+      denakop.displayAd({
+        divId: 'denakop-ad-scroll',
+        name: 'scroll',
+        sizes: [[496, 80]]
+      });
     });
   </script>
 </div>
-```
-
-#### Exemplo Tamanhos Customizaveis Postitial
-```html
-<script>
-  var denakop = denakop || { cmd: [] };
-  denakop.cmd.push(function () {
-    denakop.usePostitial([[300, 600]]);
-  });
-</script>
 ```
 
 ---------
@@ -201,7 +209,11 @@ Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte 
 <div id="<DIV_NAME>">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('<DIV_NAME>', 'intext', <CUSTOM_SIZES>);
+      denakop.displayAd({
+        divId: '<DIV_NAME>',
+        name: 'intext',
+        sizes: <CUSTOM_SIZES>
+      });
     });
   </script>
 </div>
@@ -215,28 +227,18 @@ Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte 
 <div id="denakop-ad-intext">
   <script type="text/javascript">
     denakop.cmd.push(function () {
-      denakop.displayAd('denakop-ad-intext', 'intext', {
-        desktop: [[496, 80]],
-        tablet: [[120, 600]],
-        mobile: [[250, 250]]
+      denakop.displayAd({
+        divId: 'denakop-ad-intext',
+        name: 'intext', 
+        sizes: {
+          desktop: [[496, 80]],
+          tablet: [[120, 600]],
+          mobile: [[250, 250]]
+        }
       });
     });
   </script>
 </div>
-```
-
-#### Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo Postitial
-```html
-<script>
-  var denakop = denakop || { cmd: [] };
-  denakop.cmd.push(function () {
-    denakop.usePostitial({
-        desktop: [[496, 80]],
-        tablet: [[120, 600]],
-        mobile: [[250, 250]]
-      });
-  });
-</script>
 ```
 
 ---------
