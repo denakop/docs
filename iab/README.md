@@ -11,10 +11,8 @@
 - [Avançado](#avançado)
   - [Tamanhos Customizaveis](#tamanhos-customizaveis)
     - [Exemplo Tamanhos Customizaveis](#exemplo-tamanhos-customizaveis)
-    - [Exemplo Tamanhos Customizaveis Postitial](#exemplo-tamanhos-customizaveis-postitial)
   - [Tamanhos Customizaveis Por Tipo de Dispositivo](#tamanhos-customizaveis-por-tipo-de-dispositivo)
     - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo)
-    - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo Postitial](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo-postitial)
 
 
 # IAB
@@ -182,16 +180,6 @@ Para forçar o tamanho de anúncios utilize a seguinte configuração de Snippet
 </div>
 ```
 
-#### Exemplo Tamanhos Customizaveis Postitial
-```html
-<script>
-  var denakop = denakop || { cmd: [] };
-  denakop.cmd.push(function () {
-    denakop.usePostitial([[300, 600]]);
-  });
-</script>
-```
-
 ---------
 
 ## Tamanhos Customizaveis Por Tipo de Dispositivo
@@ -223,20 +211,6 @@ Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte 
     });
   </script>
 </div>
-```
-
-#### Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo Postitial
-```html
-<script>
-  var denakop = denakop || { cmd: [] };
-  denakop.cmd.push(function () {
-    denakop.usePostitial({
-        desktop: [[496, 80]],
-        tablet: [[120, 600]],
-        mobile: [[250, 250]]
-      });
-  });
-</script>
 ```
 
 ---------
