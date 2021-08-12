@@ -14,16 +14,16 @@
   - [Tamanhos Customizaveis Por Tipo de Dispositivo](#tamanhos-customizaveis-por-tipo-de-dispositivo)
     - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo)
 
-
 # IAB
 
 Esta é a documentação de como implementar os formatos IAB no seu site.
 
----------
+---
 
 ## Tag Principal
 
 Copie e cole o snippet de código abaixo dentro da tag `head` do seu site:
+
 ```html
 <!-- IMPLEMENTAÇÃO COMEÇA AQUI -->
 <script
@@ -38,136 +38,150 @@ Copie e cole o snippet de código abaixo dentro da tag `head` do seu site:
 <!-- IMPLEMENTAÇÃO TERMINA AQUI -->
 ```
 
----------
+---
 
 ## Postitial
 
 Para mostrar o formato `Postitial` siga as intruções do snippet abaixo:
+
 ```html
 <script>
   denakop.cmd.push(function () {
-    denakop.usePostitial();
+    denakop.usePostitialBanner();
   });
 </script>
 ```
 
-
----------
+---
 
 ## Under Banner
 
 Para mostrar o formato `Under Banner` siga as intruções do snippet abaixo:
+
 ```html
 <script>
   denakop.cmd.push(function () {
-    denakop.useUnderPlacement();
+    denakop.useUnderBanner();
   });
 </script>
 ```
 
----------
+---
 
 ## Side Banner
 
 Para mostrar o formato `Side Banner` siga as intruções do snippet abaixo:
+
 ```html
 <script>
   denakop.cmd.push(function () {
-    denakop.useSidePlacement({
+    denakop.useSideBanner({
       containerWidth: <CONTAINER_WITDH>
     });
   });
 </script>
 ```
+
 ### Onde
+
 - `<CONTAINER_WITDH>`: Largura da área útil de conteúdo do seu site
 
 #### Exemplo Side Banner
+
 ```html
 <script>
   denakop.cmd.push(function () {
-    denakop.useSidePlacement({
-      containerWidth: 1130
+    denakop.useSideBanner({
+      containerWidth: 1130,
     });
   });
 </script>
 ```
 
----------
+---
 
 ## In-Text Banner
 
 Para mostrar o formato `In-Text Banner` coloque o snippet abaixo dentro da tag `body` exatamente onde você quer que o anúncio apareça
+
 ```html
 <div id="<DIV_NAME>">
   <script type="text/javascript">
     denakop.cmd.push(function () {
       denakop.displayAd({
-        divId: '<DIV_NAME>',
-        name: 'intext'
+        divId: "<DIV_NAME>",
+        name: "intext",
       });
     });
   </script>
 </div>
 ```
+
 ### Onde
+
 - `<DIV_NAME>`: `id` da `div`
 
 #### Exemplo In-Text Banner
+
 ```html
 <div id="denakop-ad-intext">
   <script type="text/javascript">
     denakop.cmd.push(function () {
       denakop.displayAd({
-        divId: 'denakop-ad-intext',
-        name: 'intext'
+        divId: "denakop-ad-intext",
+        name: "intext",
       });
     });
   </script>
 </div>
 ```
 
----------
+---
 
 ## Scroll Banner
 
 Para mostrar o formato `Scroll Banner` coloque o snippet abaixo dentro da tag `body` exatamente onde você quer que o anúncio apareça
+
 ```html
 <div id="<DIV_NAME>">
   <script type="text/javascript">
     denakop.cmd.push(function () {
       denakop.displayAd({
-        divId: '<DIV_NAME>',
-        name: 'scroll'
+        divId: "<DIV_NAME>",
+        name: "scroll",
       });
     });
   </script>
 </div>
 ```
+
 ### Onde
+
 - `<DIV_NAME>`: `id` da `div`
 
 #### Exemplo Scroll Banner
+
 ```html
 <div id="denakop-ad-scroll">
   <script type="text/javascript">
     denakop.cmd.push(function () {
       denakop.displayAd({
-        divId: 'denakop-ad-scroll',
-        name: 'scroll'
+        divId: "denakop-ad-scroll",
+        name: "scroll",
       });
     });
   </script>
 </div>
 ```
 
----------
+---
 
 # Avançado
 
 ## Tamanhos Customizaveis
 
 Para forçar o tamanho de anúncios utilize a seguinte configuração de Snippet abaixo:
+
 ```html
 <div id="<DIV_NAME>">
   <script type="text/javascript">
@@ -181,30 +195,34 @@ Para forçar o tamanho de anúncios utilize a seguinte configuração de Snippet
   </script>
 </div>
 ```
+
 ### Onde
+
 - `<DIV_NAME>`: `id` da `div`
 - `<CUSTOM_SIZES>`: Array de tamanhos personalizados
 
 #### Exemplo Tamanhos Customizaveis
+
 ```html
 <div id="denakop-ad-scroll">
   <script type="text/javascript">
     denakop.cmd.push(function () {
       denakop.displayAd({
-        divId: 'denakop-ad-scroll',
-        name: 'scroll',
-        sizes: [[496, 80]]
+        divId: "denakop-ad-scroll",
+        name: "scroll",
+        sizes: [[496, 80]],
       });
     });
   </script>
 </div>
 ```
 
----------
+---
 
 ## Tamanhos Customizaveis Por Tipo de Dispositivo
 
 Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte configuração de Snippet abaixo:
+
 ```html
 <div id="<DIV_NAME>">
   <script type="text/javascript">
@@ -218,27 +236,69 @@ Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte 
   </script>
 </div>
 ```
+
 ### Onde
+
 - `<DIV_NAME>`: `id` da `div`
 - `<CUSTOM_SIZES>`: Object de tamanhos personalizados
 
 #### Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo
+
 ```html
 <div id="denakop-ad-intext">
   <script type="text/javascript">
     denakop.cmd.push(function () {
       denakop.displayAd({
-        divId: 'denakop-ad-intext',
-        name: 'intext', 
+        divId: "denakop-ad-intext",
+        name: "intext",
         sizes: {
           desktop: [[496, 80]],
           tablet: [[120, 600]],
-          mobile: [[250, 250]]
-        }
+          mobile: [[250, 250]],
+        },
       });
     });
   </script>
 </div>
 ```
 
----------
+---
+
+## Reload do Banner Customizado
+
+Para forçar o refresh do banner customizado, utilize a seguinte configuração do Snippet abaixo:
+
+```html
+<div id="<DIV_NAME>">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd({
+        divId: '<DIV_NAME>',
+        name: 'intext',
+        reloadTime: <CUSTOM_RELOAD_TIME>
+      });
+    });
+  </script>
+</div>
+```
+
+### Onde
+
+- `<DIV_NAME>`: `id` da `div`
+- `<CUSTOM_RELOAD_TIME>`: Tempo em segundos que o banner vai realizar o reload. O valor mínimo aceito é `30`segundos.
+
+#### Exemplo Reload do Banner Customizado
+
+```html
+<div id="denakop-ad-intext">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd({
+        divId: "denakop-ad-intext",
+        name: "intext",
+        reloadTime: 30,
+      });
+    });
+  </script>
+</div>
+```
