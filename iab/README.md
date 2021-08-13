@@ -264,7 +264,7 @@ Para forçar o tamanho de anúncios por tipo de dispositivo, utilize a seguinte 
 
 ---
 
-## Reload do Banner Customizado
+## Refresh do Banner Customizado
 
 Para forçar o refresh do banner customizado, utilize a seguinte configuração do Snippet abaixo:
 
@@ -275,7 +275,7 @@ Para forçar o refresh do banner customizado, utilize a seguinte configuração 
       denakop.displayAd({
         divId: '<DIV_NAME>',
         name: 'intext',
-        reloadTime: <CUSTOM_RELOAD_TIME>
+        refresh: <CUSTOM_REFRESH_TIME>
       });
     });
   </script>
@@ -285,9 +285,9 @@ Para forçar o refresh do banner customizado, utilize a seguinte configuração 
 ### Onde
 
 - `<DIV_NAME>`: `id` da `div`
-- `<CUSTOM_RELOAD_TIME>`: Tempo em segundos que o banner vai realizar o reload. O valor mínimo aceito é `30`segundos.
+- `<CUSTOM_REFRESH_TIME>`: Tempo em segundos que o banner vai realizar o refresh. O valor mínimo aceito é `30`segundos. Caso o valor passado for `0` ou `false`, será desabilitado o refresh.
 
-#### Exemplo Reload do Banner Customizado
+#### Exemplo Refresh do Banner Customizado
 
 ```html
 <div id="denakop-ad-intext">
@@ -296,7 +296,7 @@ Para forçar o refresh do banner customizado, utilize a seguinte configuração 
       denakop.displayAd({
         divId: "denakop-ad-intext",
         name: "intext",
-        reloadTime: 30,
+        refresh: 30,
       });
     });
   </script>
