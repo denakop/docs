@@ -15,6 +15,10 @@
     - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo)
   - [Refresh do Banner Customizado](#refresh-do-banner-customizado)
     - [Exemplo Refresh do Banner Customizado](#exemplo-refresh-do-banner-customizado)
+  - [Targetings Customizados Por Banner](#targetings-customizados-por-banner)
+    - [Exemplo Targetings Customizados Por Banner](#exemplo-targetings-customizados-por-banner)
+  - [Configurações Globais](#configurações-globais)
+    - [Exemplo Configurações Globais](#exemplo-configurações-globais)
 
 # IAB
 
@@ -304,3 +308,75 @@ Para forçar o refresh do banner customizado, utilize a seguinte configuração 
   </script>
 </div>
 ```
+
+---
+
+## Targetings Customizados Por Banner
+
+Para forçar targeting customizado no banner, utilize a seguinte configuração do Snippet abaixo:
+
+```html
+<div id="<DIV_NAME>">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd({
+        divId: '<DIV_NAME>',
+        name: 'intext',
+        targetings: <CUSTOM_TARGETINGS>
+      });
+    });
+  </script>
+</div>
+```
+
+### Onde
+
+- `<DIV_NAME>`: `id` da `div`
+- `<CUSTOM_TARGETINGS>`: Array com os targetings customizados para esse banner.
+
+#### Exemplo Targetings Customizados Por Banner
+
+```html
+<div id="denakop-ad-intext">
+  <script type="text/javascript">
+    denakop.cmd.push(function () {
+      denakop.displayAd({
+        divId: "denakop-ad-intext",
+        name: "intext",
+        targetings: [["teste", "123"]],
+      });
+    });
+  </script>
+</div>
+```
+
+---
+
+## Configurações Globais
+
+Para definir as configurações globais do Denakop utilize a configuração do Snippet abaixo:
+
+```html
+<script>
+  denakop.cmd.push(function () {
+    denakop.setPageConfig({ lazyLoad: <ENABLE_LAZY_LOAD>, targetings: <CUSTOM_PAGE_TARGETING> });
+  });
+</script>
+```
+
+### Onde
+
+- `<ENABLE_LAZY_LOAD>`: Habilita o lazy load de todos os elementos da página. Recebe `true` ou `false` como valor.
+- `<CUSTOM_PAGE_TARGETING>`: Define os targetings personalizados para todos os banners da páigna.
+
+#### Exemplo Configurações Globais
+
+```html
+<script>
+  denakop.cmd.push(function () {
+    denakop.setPageConfig({ lazyLoad: true, targetings: [["teste", "123"]] });
+  });
+</script>
+```
+
+---
