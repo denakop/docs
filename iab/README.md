@@ -1,6 +1,6 @@
 - [IAB](#iab)
   - [Tag Principal](#tag-principal)
-  - [Postitial](#postitial)
+  - [Postitial Banner](#postitial)
   - [Under Banner](#under-banner)
   - [Side Banner](#side-banner)
     - [Exemplo Side Banner](#exemplo-side-banner)
@@ -13,6 +13,8 @@
     - [Exemplo Tamanhos Customizaveis](#exemplo-tamanhos-customizaveis)
   - [Tamanhos Customizaveis Por Tipo de Dispositivo](#tamanhos-customizaveis-por-tipo-de-dispositivo)
     - [Exemplo Tamanhos Customizaveis Por Tipo de Dispositivo](#exemplo-tamanhos-customizaveis-por-tipo-de-dispositivo)
+  - [Refresh do Banner Customizado](#refresh-do-banner-customizado)
+    - [Exemplo Refresh do Banner Customizado](#exemplo-refresh-do-banner-customizado)
 
 # IAB
 
