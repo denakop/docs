@@ -359,7 +359,7 @@ Para definir as configurações globais do Denakop utilize a configuração do S
 ```html
 <script>
   denakop.cmd.push(function () {
-    denakop.setPageConfig({ lazyLoad: <ENABLE_LAZY_LOAD>, targetings: <CUSTOM_PAGE_TARGETING> });
+    denakop.setPageConfig({ lazyLoad: <ENABLE_LAZY_LOAD>, targetings: <CUSTOM_PAGE_TARGETING>, networkCode: <ADITIONAL_NETWORK_CODE> });
   });
 </script>
 ```
@@ -368,13 +368,14 @@ Para definir as configurações globais do Denakop utilize a configuração do S
 
 - `<ENABLE_LAZY_LOAD>`: Habilita o lazy load de todos os elementos da página. Recebe `true` ou `false` como valor.
 - `<CUSTOM_PAGE_TARGETING>`: Define os targetings personalizados para todos os banners da páigna.
+- `<ADITIONAL_NETWORK_CODE>`: Define um network code adicional para os requests.
 
 #### Exemplo Configurações Globais
 
 ```html
 <script>
   denakop.cmd.push(function () {
-    denakop.setPageConfig({ lazyLoad: true, targetings: [["teste", "123"]] });
+    denakop.setPageConfig({ lazyLoad: true, targetings: [["teste", "123"]], networkCode: "21715141650" });
   });
 </script>
 ```
