@@ -343,7 +343,7 @@ Para forçar targeting customizado no banner, utilize a seguinte configuração 
       denakop.displayAd({
         divId: "denakop-ad-intext",
         name: "intext",
-        targetings: [["teste", "123"]],
+        targetings: { teste: "123" },
       });
     });
   </script>
@@ -384,7 +384,7 @@ Para definir as configurações globais do Denakop utilize a configuração do S
     denakop.setPageConfig(
       { 
         lazyLoad: true,
-        targetings: [["teste", "123"]],
+        targetings: { teste: "123" },
         networkCode: "21715141650" 
       }
     );
